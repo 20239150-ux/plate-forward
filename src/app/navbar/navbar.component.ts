@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   private userService = inject(UserServiceService);
   private subscription: Subscription = new Subscription();
   isLoggedInFlag = false;
+  isDropdownOpen = false;
 
   ngOnInit() {
     this.subscription = this.userService.currentUser$.subscribe(user => {
@@ -31,5 +32,10 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   logout() {
     this.userService.logout();
+    this.isDropdownOpen = false;
+  }
+
+  toggleDropdown() {
+    this.isDropdownOpen = !this.isDropdownOpen;
   }
 }
