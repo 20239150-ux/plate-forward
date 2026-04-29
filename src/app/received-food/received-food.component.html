@@ -14,6 +14,7 @@
         <p *ngIf="donation.expiry" class="expiry-info"><strong>Available Until:</strong> {{ donation.expiry | date: 'shortDate' }}</p>
         <p *ngIf="donation.donorName" class="donor-info"><strong>Donor:</strong> {{ donation.donorName }}</p>
         <p *ngIf="donation.donorContact" class="donor-contact"><strong>Contact:</strong> {{ donation.donorContact }}</p>
+        <button type="button" class="get-button" (click)="getDonation(donation)">Get</button>
       </div>
     </div>
   </div>
