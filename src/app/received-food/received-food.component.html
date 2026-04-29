@@ -1,0 +1,18 @@
+<div class="donations-container">
+  <h1>Available Food Donations</h1>
+  
+  <div *ngIf="donations().length === 0" class="no-donations">
+    <p>No food donations available at the moment.</p>
+  </div>
+
+  <div *ngIf="donations().length > 0" class="donations-list">
+    <div *ngFor="let donation of donations()" class="donation-card">
+      <div class="donation-info">
+        <h3>{{ donation.food }}</h3>
+        <p><strong>Pickup Address:</strong> {{ donation.address }}</p>
+        <p *ngIf="donation.donorName" class="donor-info"><strong>Donor:</strong> {{ donation.donorName }}</p>
+        <p *ngIf="donation.donorContact" class="donor-contact"><strong>Contact:</strong> {{ donation.donorContact }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+.donations-container {
+	padding: 16px;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.donations-container h1 {
+	text-align: center;
+	color: #333;
+	margin-bottom: 24px;
+	font-size: 28px;
+}
+
+.no-donations {
+	text-align: center;
+	padding: 32px 16px;
+	color: #666;
+	font-size: 16px;
+}
+
+.donations-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 16px;
+}
+
+.donation-card {
+	background: #fff;
+	border: 1px solid #e6e6e6;
+	border-radius: 8px;
+	padding: 16px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+	transition: box-shadow 0.3s ease;
+}
+
+.donation-card:hover {
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.donation-info h3 {
+	color: #2b8aef;
+	margin: 0 0 12px 0;
+	font-size: 18px;
+}
+
+.donation-info p {
+	margin: 8px 0;
+	color: #555;
+	font-size: 14px;
+}
+
+.donation-info strong {
+	color: #333;
+}
+
+.donor-info,
+.donor-contact {
+	font-size: 13px;
+	color: #777;
+	margin-top: 12px;
+	padding-top: 12px;
+	border-top: 1px solid #f0f0f0;
+}
+
+@media (max-width: 600px) {
+	.donations-list {
+		grid-template-columns: 1fr;
+	}
+
+	.donations-container h1 {
+		font-size: 22px;
+	}
+}

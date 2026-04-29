@@ -11,4 +11,5 @@ export const routes: Routes = [
   { path: 'user-creation', component: UserCreationComponent },
   { path: 'profile', component: UserProfileComponent },
   { path: 'food-donation', loadComponent: () => import('./food-donation/food-donation.component').then(m => m.FoodDonationComponent) },
+  { path: 'received-food', loadComponent: () => import('./received-food/received-food.component').then(m => m.ReceivedFoodComponent) },
 ];
