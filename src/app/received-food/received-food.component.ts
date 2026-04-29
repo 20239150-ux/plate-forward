@@ -6,6 +6,7 @@ import { UserServiceService } from '../user-service.service';
 
 @Component({
   selector: 'app-received-food',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './received-food.component.html',
   styleUrl: './received-food.component.css'
