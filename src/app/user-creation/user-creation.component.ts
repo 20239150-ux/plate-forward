@@ -20,8 +20,7 @@ export class UserCreationComponent {
   userForm: FormGroup = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(2)]],
     email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required, Validators.minLength(6)]],
-    role: ['user', Validators.required]
+    password: ['', [Validators.required, Validators.minLength(6)]]
   });
 
   /**
