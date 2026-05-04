@@ -50,14 +50,6 @@
         }
       </div>
 
-      <div class="form-group">
-        <label for="role">User Role</label>
-        <select id="role" formControlName="role" class="form-control">
-          <option value="user">👤 Regular User</option>
-          <option value="admin">👑 Admin</option>
-        </select>
-      </div>
-
       <button type="submit" [disabled]="userForm.invalid" class="submit-btn">
         ✅ Create Account
       </button>
